@@ -1,6 +1,6 @@
 ﻿namespace simpleList
 {
-    partial class Form1
+    partial class FrmListeSimple
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioBtnSimple = new System.Windows.Forms.RadioButton();
-            this.radioBtnEtendue = new System.Windows.Forms.RadioButton();
             this.radioBtnMultiple = new System.Windows.Forms.RadioButton();
+            this.radioBtnEtendue = new System.Windows.Forms.RadioButton();
+            this.radioBtnSimple = new System.Windows.Forms.RadioButton();
             this.ChkLocked = new System.Windows.Forms.CheckBox();
             this.BtnAffiche = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
-            this.LstItems = new System.Windows.Forms.ListView();
             this.TxtSaisie = new System.Windows.Forms.TextBox();
             this.BtnAjouter = new System.Windows.Forms.Button();
+            this.LstItems = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,28 +52,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Type de sélection";
-            // 
-            // radioBtnSimple
-            // 
-            this.radioBtnSimple.AutoSize = true;
-            this.radioBtnSimple.Location = new System.Drawing.Point(20, 38);
-            this.radioBtnSimple.Name = "radioBtnSimple";
-            this.radioBtnSimple.Size = new System.Drawing.Size(71, 21);
-            this.radioBtnSimple.TabIndex = 0;
-            this.radioBtnSimple.TabStop = true;
-            this.radioBtnSimple.Text = "Simple";
-            this.radioBtnSimple.UseVisualStyleBackColor = true;
-            // 
-            // radioBtnEtendue
-            // 
-            this.radioBtnEtendue.AutoSize = true;
-            this.radioBtnEtendue.Location = new System.Drawing.Point(20, 92);
-            this.radioBtnEtendue.Name = "radioBtnEtendue";
-            this.radioBtnEtendue.Size = new System.Drawing.Size(82, 21);
-            this.radioBtnEtendue.TabIndex = 1;
-            this.radioBtnEtendue.TabStop = true;
-            this.radioBtnEtendue.Text = "Etendue";
-            this.radioBtnEtendue.UseVisualStyleBackColor = true;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // radioBtnMultiple
             // 
@@ -85,6 +64,31 @@
             this.radioBtnMultiple.TabStop = true;
             this.radioBtnMultiple.Text = "Multiple";
             this.radioBtnMultiple.UseVisualStyleBackColor = true;
+            this.radioBtnMultiple.Click += new System.EventHandler(this.RadioBtnStatus);
+            // 
+            // radioBtnEtendue
+            // 
+            this.radioBtnEtendue.AutoSize = true;
+            this.radioBtnEtendue.Location = new System.Drawing.Point(20, 92);
+            this.radioBtnEtendue.Name = "radioBtnEtendue";
+            this.radioBtnEtendue.Size = new System.Drawing.Size(82, 21);
+            this.radioBtnEtendue.TabIndex = 1;
+            this.radioBtnEtendue.TabStop = true;
+            this.radioBtnEtendue.Text = "Etendue";
+            this.radioBtnEtendue.UseVisualStyleBackColor = true;
+            this.radioBtnEtendue.Click += new System.EventHandler(this.RadioBtnStatus);
+            // 
+            // radioBtnSimple
+            // 
+            this.radioBtnSimple.AutoSize = true;
+            this.radioBtnSimple.Location = new System.Drawing.Point(20, 38);
+            this.radioBtnSimple.Name = "radioBtnSimple";
+            this.radioBtnSimple.Size = new System.Drawing.Size(71, 21);
+            this.radioBtnSimple.TabIndex = 0;
+            this.radioBtnSimple.TabStop = true;
+            this.radioBtnSimple.Text = "Simple";
+            this.radioBtnSimple.UseVisualStyleBackColor = true;
+            this.radioBtnSimple.Click += new System.EventHandler(this.RadioBtnStatus);
             // 
             // ChkLocked
             // 
@@ -114,14 +118,6 @@
             this.BtnDelete.Text = "Supprimer la séléction";
             this.BtnDelete.UseVisualStyleBackColor = true;
             // 
-            // LstItems
-            // 
-            this.LstItems.Location = new System.Drawing.Point(325, 13);
-            this.LstItems.Name = "LstItems";
-            this.LstItems.Size = new System.Drawing.Size(314, 258);
-            this.LstItems.TabIndex = 4;
-            this.LstItems.UseCompatibleStateImageBehavior = false;
-            // 
             // TxtSaisie
             // 
             this.TxtSaisie.Location = new System.Drawing.Point(325, 291);
@@ -137,21 +133,31 @@
             this.BtnAjouter.TabIndex = 6;
             this.BtnAjouter.Text = "Ajouter";
             this.BtnAjouter.UseVisualStyleBackColor = true;
+            this.BtnAjouter.Click += new System.EventHandler(this.BtnAjouter_Click);
             // 
-            // Form1
+            // LstItems
+            // 
+            this.LstItems.FormattingEnabled = true;
+            this.LstItems.ItemHeight = 16;
+            this.LstItems.Location = new System.Drawing.Point(325, 11);
+            this.LstItems.Name = "LstItems";
+            this.LstItems.Size = new System.Drawing.Size(314, 260);
+            this.LstItems.TabIndex = 7;
+            // 
+            // FrmListeSimple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 473);
+            this.ClientSize = new System.Drawing.Size(908, 473);
+            this.Controls.Add(this.LstItems);
             this.Controls.Add(this.BtnAjouter);
             this.Controls.Add(this.TxtSaisie);
-            this.Controls.Add(this.LstItems);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnAffiche);
             this.Controls.Add(this.ChkLocked);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FrmListeSimple";
+            this.Text = "FrmListeSimple";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -168,10 +174,10 @@
         private System.Windows.Forms.CheckBox ChkLocked;
         private System.Windows.Forms.Button BtnAffiche;
         private System.Windows.Forms.Button BtnDelete;
-        private System.Windows.Forms.ListView LstItems;
         private System.Windows.Forms.TextBox TxtSaisie;
         private System.Windows.Forms.Button BtnAjouter;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ListBox LstItems;
     }
 }
 

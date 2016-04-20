@@ -2,8 +2,8 @@ C:\Users\davv\Documents\GitHub\simpleList\simpleList\bin\Debug\simpleList.exe.co
 C:\Users\davv\Documents\GitHub\simpleList\simpleList\bin\Debug\simpleList.exe
 C:\Users\davv\Documents\GitHub\simpleList\simpleList\bin\Debug\simpleList.pdb
 C:\Users\davv\Documents\GitHub\simpleList\simpleList\obj\Debug\simpleList.csprojResolveAssemblyReference.cache
-C:\Users\davv\Documents\GitHub\simpleList\simpleList\obj\Debug\simpleList.Form1.resources
 C:\Users\davv\Documents\GitHub\simpleList\simpleList\obj\Debug\simpleList.Properties.Resources.resources
 C:\Users\davv\Documents\GitHub\simpleList\simpleList\obj\Debug\simpleList.csproj.GenerateResource.Cache
 C:\Users\davv\Documents\GitHub\simpleList\simpleList\obj\Debug\simpleList.exe
 C:\Users\davv\Documents\GitHub\simpleList\simpleList\obj\Debug\simpleList.pdb
+C:\Users\davv\Documents\GitHub\simpleList\simpleList\obj\Debug\simpleList.FrmListeSimple.resources
