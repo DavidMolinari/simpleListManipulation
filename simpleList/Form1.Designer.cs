@@ -1,0 +1,177 @@
+﻿namespace simpleList
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Variable nécessaire au concepteur.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Nettoyage des ressources utilisées.
+        /// </summary>
+        /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Code généré par le Concepteur Windows Form
+
+        /// <summary>
+        /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+        /// le contenu de cette méthode avec l'éditeur de code.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioBtnSimple = new System.Windows.Forms.RadioButton();
+            this.radioBtnEtendue = new System.Windows.Forms.RadioButton();
+            this.radioBtnMultiple = new System.Windows.Forms.RadioButton();
+            this.ChkLocked = new System.Windows.Forms.CheckBox();
+            this.BtnAffiche = new System.Windows.Forms.Button();
+            this.BtnDelete = new System.Windows.Forms.Button();
+            this.LstItems = new System.Windows.Forms.ListView();
+            this.TxtSaisie = new System.Windows.Forms.TextBox();
+            this.BtnAjouter = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioBtnMultiple);
+            this.groupBox1.Controls.Add(this.radioBtnEtendue);
+            this.groupBox1.Controls.Add(this.radioBtnSimple);
+            this.groupBox1.Location = new System.Drawing.Point(13, 13);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(220, 150);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Type de sélection";
+            // 
+            // radioBtnSimple
+            // 
+            this.radioBtnSimple.AutoSize = true;
+            this.radioBtnSimple.Location = new System.Drawing.Point(20, 38);
+            this.radioBtnSimple.Name = "radioBtnSimple";
+            this.radioBtnSimple.Size = new System.Drawing.Size(71, 21);
+            this.radioBtnSimple.TabIndex = 0;
+            this.radioBtnSimple.TabStop = true;
+            this.radioBtnSimple.Text = "Simple";
+            this.radioBtnSimple.UseVisualStyleBackColor = true;
+            // 
+            // radioBtnEtendue
+            // 
+            this.radioBtnEtendue.AutoSize = true;
+            this.radioBtnEtendue.Location = new System.Drawing.Point(20, 92);
+            this.radioBtnEtendue.Name = "radioBtnEtendue";
+            this.radioBtnEtendue.Size = new System.Drawing.Size(82, 21);
+            this.radioBtnEtendue.TabIndex = 1;
+            this.radioBtnEtendue.TabStop = true;
+            this.radioBtnEtendue.Text = "Etendue";
+            this.radioBtnEtendue.UseVisualStyleBackColor = true;
+            // 
+            // radioBtnMultiple
+            // 
+            this.radioBtnMultiple.AutoSize = true;
+            this.radioBtnMultiple.Location = new System.Drawing.Point(20, 65);
+            this.radioBtnMultiple.Name = "radioBtnMultiple";
+            this.radioBtnMultiple.Size = new System.Drawing.Size(77, 21);
+            this.radioBtnMultiple.TabIndex = 2;
+            this.radioBtnMultiple.TabStop = true;
+            this.radioBtnMultiple.Text = "Multiple";
+            this.radioBtnMultiple.UseVisualStyleBackColor = true;
+            // 
+            // ChkLocked
+            // 
+            this.ChkLocked.AutoSize = true;
+            this.ChkLocked.Location = new System.Drawing.Point(33, 191);
+            this.ChkLocked.Name = "ChkLocked";
+            this.ChkLocked.Size = new System.Drawing.Size(132, 21);
+            this.ChkLocked.TabIndex = 1;
+            this.ChkLocked.Text = "Liste Verrouillée";
+            this.ChkLocked.UseVisualStyleBackColor = true;
+            // 
+            // BtnAffiche
+            // 
+            this.BtnAffiche.Location = new System.Drawing.Point(33, 241);
+            this.BtnAffiche.Name = "BtnAffiche";
+            this.BtnAffiche.Size = new System.Drawing.Size(174, 30);
+            this.BtnAffiche.TabIndex = 2;
+            this.BtnAffiche.Text = "Afficher la sélection";
+            this.BtnAffiche.UseVisualStyleBackColor = true;
+            // 
+            // BtnDelete
+            // 
+            this.BtnDelete.Location = new System.Drawing.Point(33, 291);
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Size = new System.Drawing.Size(174, 30);
+            this.BtnDelete.TabIndex = 3;
+            this.BtnDelete.Text = "Supprimer la séléction";
+            this.BtnDelete.UseVisualStyleBackColor = true;
+            // 
+            // LstItems
+            // 
+            this.LstItems.Location = new System.Drawing.Point(325, 13);
+            this.LstItems.Name = "LstItems";
+            this.LstItems.Size = new System.Drawing.Size(314, 258);
+            this.LstItems.TabIndex = 4;
+            this.LstItems.UseCompatibleStateImageBehavior = false;
+            // 
+            // TxtSaisie
+            // 
+            this.TxtSaisie.Location = new System.Drawing.Point(325, 291);
+            this.TxtSaisie.Name = "TxtSaisie";
+            this.TxtSaisie.Size = new System.Drawing.Size(314, 22);
+            this.TxtSaisie.TabIndex = 5;
+            // 
+            // BtnAjouter
+            // 
+            this.BtnAjouter.Location = new System.Drawing.Point(391, 319);
+            this.BtnAjouter.Name = "BtnAjouter";
+            this.BtnAjouter.Size = new System.Drawing.Size(163, 23);
+            this.BtnAjouter.TabIndex = 6;
+            this.BtnAjouter.Text = "Ajouter";
+            this.BtnAjouter.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(758, 473);
+            this.Controls.Add(this.BtnAjouter);
+            this.Controls.Add(this.TxtSaisie);
+            this.Controls.Add(this.LstItems);
+            this.Controls.Add(this.BtnDelete);
+            this.Controls.Add(this.BtnAffiche);
+            this.Controls.Add(this.ChkLocked);
+            this.Controls.Add(this.groupBox1);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.RadioButton radioBtnMultiple;
+        private System.Windows.Forms.RadioButton radioBtnEtendue;
+        private System.Windows.Forms.RadioButton radioBtnSimple;
+        private System.Windows.Forms.CheckBox ChkLocked;
+        private System.Windows.Forms.Button BtnAffiche;
+        private System.Windows.Forms.Button BtnDelete;
+        private System.Windows.Forms.ListView LstItems;
+        private System.Windows.Forms.TextBox TxtSaisie;
+        private System.Windows.Forms.Button BtnAjouter;
+        private System.Windows.Forms.GroupBox groupBox1;
+    }
+}
+
