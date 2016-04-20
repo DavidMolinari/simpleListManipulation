@@ -7,3 +7,4 @@ C:\Users\davv\Documents\GitHub\simpleList\simpleList\obj\Debug\simpleList.csproj
 C:\Users\davv\Documents\GitHub\simpleList\simpleList\obj\Debug\simpleList.exe
 C:\Users\davv\Documents\GitHub\simpleList\simpleList\obj\Debug\simpleList.pdb
 C:\Users\davv\Documents\GitHub\simpleList\simpleList\obj\Debug\simpleList.FrmListeSimple.resources
+C:\Users\davv\Documents\GitHub\simpleList\simpleList\bin\Debug\MetroFramework.dll

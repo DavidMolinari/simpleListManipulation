@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MetroFramework;
 using System.Windows.Forms;
 
 namespace simpleList
@@ -19,7 +20,7 @@ namespace simpleList
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void FrmListe_Load(object sender, EventArgs e)
         {
             this.LstItems.Items.Add("Marie");
             this.LstItems.Items.Add("Jean");
@@ -27,19 +28,11 @@ namespace simpleList
             this.LstItems.Items.Add("Julien");
             this.LstItems.Items.Add("François");
             this.LstItems.Items.Add("Helène");
+            this.ActiveControl = TxtSaisie;
 
-
-
+           
         }
 
-        private void LstItems_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LstItems_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-        }
 
         private void BtnAjouter_Click(object sender, EventArgs e)
         {
@@ -52,11 +45,6 @@ namespace simpleList
             }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-
-        }
 
 
 
@@ -118,7 +106,11 @@ namespace simpleList
                 LstItems.Items.Remove(LstItems.SelectedItems[0]);
             }
         }
-
+        /// <summary>
+        /// Fonction perso Pour Changer le status des boutons en fonction des éléments selectionnés.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void disableAfficher(object sender, EventArgs e)
         {
             if (LstItems.SelectedItems.Count > 0)
@@ -131,12 +123,46 @@ namespace simpleList
                 this.BtnDelete.Enabled = false;
             }
 
+        }
+
+        /// <summary>
+        /// Evênements Shortcuts
+        /// KeyUp Entrer renvoie sur BtnAjouter
+        /// KeyUp Delete renvoie sur BtnDelete
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TxtSaisie_KeyUp(object sender, KeyEventArgs e)
+        {
+
+            // Si j'appuie sur Entrer, j'ajoute un élément dans la liste.
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.BtnAjouter_Click(null, null);
+                                this.BtnDelete_Click(null, null);
+
+            }
+
+            // Raccourcit Supprimer
+
+
+            
+        }
+
+        private void TxtSaisie_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(this.TxtSaisie.Text))
+            {
+                this.BtnAjouter.Enabled = false;
+            }
+            else this.BtnAjouter.Enabled = true;
+
 
         }
 
         private void LstItems_SelectedValueChanged(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

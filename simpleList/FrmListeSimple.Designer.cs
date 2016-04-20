@@ -52,7 +52,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Type de sélection";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // radioBtnMultiple
             // 
@@ -129,9 +128,12 @@
             this.TxtSaisie.Name = "TxtSaisie";
             this.TxtSaisie.Size = new System.Drawing.Size(314, 22);
             this.TxtSaisie.TabIndex = 5;
+            this.TxtSaisie.TextChanged += new System.EventHandler(this.TxtSaisie_TextChanged);
+            this.TxtSaisie.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtSaisie_KeyUp);
             // 
             // BtnAjouter
             // 
+            this.BtnAjouter.Enabled = false;
             this.BtnAjouter.Location = new System.Drawing.Point(391, 319);
             this.BtnAjouter.Name = "BtnAjouter";
             this.BtnAjouter.Size = new System.Drawing.Size(163, 23);
@@ -165,7 +167,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmListeSimple";
             this.Text = "FrmListeSimple";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.FrmListe_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
