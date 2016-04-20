@@ -99,6 +99,7 @@
             this.ChkLocked.TabIndex = 1;
             this.ChkLocked.Text = "Liste Verrouillée";
             this.ChkLocked.UseVisualStyleBackColor = true;
+            this.ChkLocked.CheckedChanged += new System.EventHandler(this.ChkLocked_CheckedChanged);
             // 
             // BtnAffiche
             // 

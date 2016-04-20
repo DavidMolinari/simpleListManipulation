@@ -68,7 +68,6 @@ namespace simpleList
             {
                 this.LstItems.ClearSelected();
                 this.LstItems.SelectionMode = SelectionMode.MultiExtended;
-
             }
             if (this.radioBtnMultiple.Checked)
             {
@@ -81,6 +80,15 @@ namespace simpleList
                 this.LstItems.SelectionMode = SelectionMode.One;
             }
 
+        }
+
+        private void ChkLocked_CheckedChanged(object sender, EventArgs e)
+        {
+            bool btnChecked = ChkLocked.CheckState == CheckState.Checked;
+            // Si Le Chk est Checked, je verouille, autrement, je laisse en normal.
+            if (!(btnChecked)) {
+                this.LstItems.SelectionMode = SelectionMode.One;
+            } else this.LstItems.SelectionMode = SelectionMode.None;
         }
     }
 }
