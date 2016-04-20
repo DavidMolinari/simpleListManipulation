@@ -29,10 +29,8 @@ namespace simpleList
             this.LstItems.Items.Add("Helène");
 
 
-        
-        
 
-    }
+        }
 
         private void LstItems_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -88,9 +86,11 @@ namespace simpleList
         {
             bool btnChecked = ChkLocked.CheckState == CheckState.Checked;
             // Si Le Chk est Checked, je verouille, autrement, je laisse en normal.
-            if (!(btnChecked)) {
+            if (!(btnChecked))
+            {
                 this.LstItems.SelectionMode = SelectionMode.One;
-            } else this.LstItems.SelectionMode = SelectionMode.None;
+            }
+            else this.LstItems.SelectionMode = SelectionMode.None;
         }
 
         private void BtnAffiche_Click(object sender, EventArgs e)
@@ -100,9 +100,42 @@ namespace simpleList
             // Assez Inutile, mais Meh
             foreach (var item in LstItems.SelectedItems)
             {
-                Meh += item.ToString() + " " ;
+                Meh += item.ToString() + " ";
             }
             MessageBox.Show(Meh);
+
+        }
+        /// <summary>
+        /// Méthode pour supprimer tous les items séléctionnés 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+
+            while (LstItems.SelectedItems.Count > 0)
+            {
+                LstItems.Items.Remove(LstItems.SelectedItems[0]);
+            }
+        }
+
+        private void disableAfficher(object sender, EventArgs e)
+        {
+            if (LstItems.SelectedItems.Count > 0)
+            {
+                this.BtnAffiche.Enabled = true;
+                this.BtnDelete.Enabled = true;
+            }
+            else {
+                this.BtnAffiche.Enabled = false;
+                this.BtnDelete.Enabled = false;
+            }
+
+
+        }
+
+        private void LstItems_SelectedValueChanged(object sender, EventArgs e)
+        {
 
         }
     }

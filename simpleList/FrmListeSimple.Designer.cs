@@ -103,6 +103,7 @@
             // 
             // BtnAffiche
             // 
+            this.BtnAffiche.Enabled = false;
             this.BtnAffiche.Location = new System.Drawing.Point(33, 241);
             this.BtnAffiche.Name = "BtnAffiche";
             this.BtnAffiche.Size = new System.Drawing.Size(174, 30);
@@ -113,12 +114,14 @@
             // 
             // BtnDelete
             // 
+            this.BtnDelete.Enabled = false;
             this.BtnDelete.Location = new System.Drawing.Point(33, 291);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Size = new System.Drawing.Size(174, 30);
             this.BtnDelete.TabIndex = 3;
             this.BtnDelete.Text = "Supprimer la séléction";
             this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // TxtSaisie
             // 
@@ -145,12 +148,14 @@
             this.LstItems.Name = "LstItems";
             this.LstItems.Size = new System.Drawing.Size(314, 260);
             this.LstItems.TabIndex = 7;
+            this.LstItems.SelectedIndexChanged += new System.EventHandler(this.disableAfficher);
+            this.LstItems.SelectedValueChanged += new System.EventHandler(this.LstItems_SelectedValueChanged);
             // 
             // FrmListeSimple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 473);
+            this.ClientSize = new System.Drawing.Size(650, 373);
             this.Controls.Add(this.LstItems);
             this.Controls.Add(this.BtnAjouter);
             this.Controls.Add(this.TxtSaisie);
