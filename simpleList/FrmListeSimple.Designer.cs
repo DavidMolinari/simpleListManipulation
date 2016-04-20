@@ -109,6 +109,7 @@
             this.BtnAffiche.TabIndex = 2;
             this.BtnAffiche.Text = "Afficher la sélection";
             this.BtnAffiche.UseVisualStyleBackColor = true;
+            this.BtnAffiche.Click += new System.EventHandler(this.BtnAffiche_Click);
             // 
             // BtnDelete
             // 

@@ -12,6 +12,8 @@ namespace simpleList
 {
     public partial class FrmListeSimple : Form
     {
+        string Meh;
+
         public FrmListeSimple()
         {
             InitializeComponent();
@@ -89,6 +91,19 @@ namespace simpleList
             if (!(btnChecked)) {
                 this.LstItems.SelectionMode = SelectionMode.One;
             } else this.LstItems.SelectionMode = SelectionMode.None;
+        }
+
+        private void BtnAffiche_Click(object sender, EventArgs e)
+        {
+
+            // Parcours des Items Selectionnés , et affichage dans une messageBox
+            // Assez Inutile, mais Meh
+            foreach (var item in LstItems.SelectedItems)
+            {
+                Meh += item.ToString() + " " ;
+            }
+            MessageBox.Show(Meh);
+
         }
     }
 }
