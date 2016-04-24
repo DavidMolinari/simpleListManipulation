@@ -102,13 +102,14 @@
             // 
             // BtnAffiche
             // 
+            this.BtnAffiche.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BtnAffiche.Enabled = false;
             this.BtnAffiche.Location = new System.Drawing.Point(33, 241);
             this.BtnAffiche.Name = "BtnAffiche";
             this.BtnAffiche.Size = new System.Drawing.Size(174, 30);
             this.BtnAffiche.TabIndex = 2;
             this.BtnAffiche.Text = "Afficher la sélection";
-            this.BtnAffiche.UseVisualStyleBackColor = true;
+            this.BtnAffiche.UseVisualStyleBackColor = false;
             this.BtnAffiche.Click += new System.EventHandler(this.BtnAffiche_Click);
             // 
             // BtnDelete
@@ -134,6 +135,7 @@
             // BtnAjouter
             // 
             this.BtnAjouter.Enabled = false;
+            this.BtnAjouter.ForeColor = System.Drawing.Color.Black;
             this.BtnAjouter.Location = new System.Drawing.Point(391, 319);
             this.BtnAjouter.Name = "BtnAjouter";
             this.BtnAjouter.Size = new System.Drawing.Size(163, 23);
@@ -157,6 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(650, 373);
             this.Controls.Add(this.LstItems);
             this.Controls.Add(this.BtnAjouter);

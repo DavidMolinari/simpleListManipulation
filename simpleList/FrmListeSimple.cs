@@ -13,12 +13,15 @@ namespace simpleList
 {
     public partial class FrmListeSimple : Form
     {
+
+        // Variable qui va contenir la liste d'items à retourner dans une messageBox
         string Meh;
 
         public FrmListeSimple()
         {
             InitializeComponent();
         }
+
 
         private void FrmListe_Load(object sender, EventArgs e)
         {
@@ -42,6 +45,7 @@ namespace simpleList
             {
                 this.LstItems.Items.Add(this.TxtSaisie.Text);
                 this.TxtSaisie.Clear();
+                
             }
         }
 
